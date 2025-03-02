@@ -222,25 +222,39 @@ h1 {
 }
 
 .button {
-	grid-row: -1;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 600;
-	cursor: pointer;
-	display: block;
-	padding: 0 1.5em;
-	height: 3em;
-	line-height: 2.9em;
-	min-width: 3em;
-	background-color: transparent;
-	border: solid 2px #fff;
-	color: #fff;
-	border-radius: 4px;
-	text-align: center;
-	left: 50%;
-	backface-visibility: hidden;
-	transition: 0.3s ease-in-out;
-	text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    grid-row: -1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    padding: 0 1.5em;
+    height: 3em;
+    line-height: 2.9em;
+    min-width: 3em;
+    background-color: transparent;
+    border: solid 2px #fff;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    backface-visibility: hidden;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+.front .button {
+    grid-row: 4;
+    align-self: end;
+}
+
+.back .button {
+    grid-row: 7;
+    width: fit-content;
+    align-self: end;
+    justify-self: center;
+}
 
 	&:hover {
 		background-color: #fff;
@@ -275,7 +289,7 @@ h1 {
 	background: $accent-color;
 }
 
-/* Media Queries for Responsiveness */
+
 @media (max-width: 768px) {
 	.wrapper {
 		padding: 0 1rem;
